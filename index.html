@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ChaiKadai | The Heart of Tamil Street Food</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#410002",
+                        "outline": "#847560",
+                        "inverse-on-surface": "#f8f0e1",
+                        "secondary": "#b51a1b",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e9e2d3",
+                        "on-tertiary-fixed": "#002204",
+                        "on-secondary-fixed-variant": "#93000b",
+                        "surface-bright": "#fff8ef",
+                        "primary-fixed-dim": "#ffba38",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#88d982",
+                        "on-primary-fixed-variant": "#604100",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d6c4ac",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#005c15",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary-fixed": "#a3f69c",
+                        "background": "#fff8ef",
+                        "surface-container-low": "#fbf3e4",
+                        "on-background": "#1e1b13",
+                        "on-primary-fixed": "#281900",
+                        "primary-fixed": "#ffdeac",
+                        "secondary-fixed": "#ffdad6",
+                        "surface-dim": "#e1d9cb",
+                        "surface-tint": "#7e5700",
+                        "surface-container": "#f5edde",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#514532",
+                        "on-tertiary-fixed-variant": "#005312",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#efe7d9",
+                        "inverse-primary": "#ffba38",
+                        "secondary-container": "#d93630",
+                        "on-surface": "#1e1b13",
+                        "surface-container-highest": "#e9e2d3",
+                        "secondary-fixed-dim": "#ffb4ab",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#83d47e",
+                        "tertiary": "#1b6d24",
+                        "on-primary-container": "#6b4900",
+                        "primary-container": "#ffb300",
+                        "surface": "#fff8ef",
+                        "inverse-surface": "#343026",
+                        "primary": "#7e5700"
+                    },
+                    fontFamily: {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff8ef]/85 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#7e5700] tracking-tight font-headline">ChaiKadai</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8 font-headline font-bold text-lg">
+<a class="text-[#b51a1b] border-b-2 border-[#b51a1b] hover:text-[#b51a1b] transition-colors duration-300" href="#">Menu</a>
+<a class="text-[#7e5700] opacity-80 hover:text-[#b51a1b] transition-colors duration-300" href="#">Offers</a>
+<a class="text-[#7e5700] opacity-80 hover:text-[#b51a1b] transition-colors duration-300" href="#">Track Order</a>
+<a class="text-[#7e5700] opacity-80 hover:text-[#b51a1b] transition-colors duration-300" href="#">About</a>
+</div>
+<div class="flex items-center gap-4 text-[#7e5700]">
+<button class="p-2 hover:bg-[#7e5700]/10 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="p-2 hover:bg-[#7e5700]/10 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20 pb-24 md:pb-0">
+<!-- Hero Section -->
+<section class="relative px-6 py-12 md:py-24 max-w-7xl mx-auto overflow-hidden">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 z-10">
+<h1 class="font-headline font-black text-5xl md:text-7xl text-primary leading-none mb-6">
+                        The Heart of Tamil Street Food, <span class="text-secondary italic">Delivered.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg mb-10 leading-relaxed">
+                        From the smoky tiffins of Madurai to the vibrant filter coffee stalls of Chennai. Authentic recipes, street-side soul.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-gradient-to-b from-primary to-primary-container text-white font-bold rounded-xl shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+                            Order Now
+                        </button>
+<button class="px-8 py-4 border-2 border-outline-variant/30 text-secondary font-bold rounded-xl hover:bg-secondary/5 transition-all">
+                            View Menu
+                        </button>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="relative rounded-lg overflow-hidden transform rotate-2 shadow-2xl bg-[#fdf3e2]">
+<img alt="Vibrant and playful doodle illustration of Tamil street food including idlis, dosas, vadas, biriyani, and filter coffee." class="w-full h-[400px] md:h-[500px] object-contain" data-alt="A colorful, eye-catching doodle illustration of various Tamil street food items reflecting a lively ChaiKadai atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe-S-879o_376JaevEHQ3Ly8GS_cOKqvBRZxq9hvPl-vX-3uIumbk7r7P98cZF0xaNSVU8YXAMC6OO-1VRqeucshPZKN9hoLoYYg7h1F-jcCllak-FLQrQaUhx70ot2hAiRee-KThBLHz4sgRq_1MdinNTHLhhSE6zoXbjA74fTQWS858WUu83VNFi2-cdeHVkJpT5IPa4aYGugcJY99-8UsWC_kB_hK89qVzZYpaodnmso4TS-tsgklQSM7v3EpiSCi-kFdo2cMw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-tertiary-container rounded-full blur-3xl opacity-30"></div>
+</div>
+</div>
+</section>
+<!-- Menu Preview Section -->
+<section class="bg-surface-container-low py-20 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<span class="text-tertiary font-bold uppercase tracking-widest text-sm block mb-2">Our Classics</span>
+<h2 class="font-headline font-black text-4xl text-on-surface">Mouthwatering Favorites</h2>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                        Explore Full Menu <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Idli -->
+<div class="group bg-surface rounded-lg p-4 shadow-none hover:shadow-xl transition-all duration-300">
+<div class="overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="soft fluffy white idlis stacked on a banana leaf with coconut chutney and tomato chutney side bowls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBttphcsWOe_neev0n5XNB7HPok9AdvH3XNH-FeIEPc8CTCbS6YZNjoFiM27wSL0WKBhvcGdyYUAuXFh4Q8dDDXELzxWVIkATLh0thxmxxo7oFTNy_zHGlZUYc6Ej-lbgz_Xdt2CAMuITvXLi368QVCv-RTge2W5vj6QDtBBulNIwm_2i8zs9rGJw4jirpXTTaqPW5ILr7UmgILMm_UGCKWRoueRuJY8jr6TLP2YUptKQ1XaZKI4vWP0qLP6s0R-yGNTdgE4jaxbl8"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Idli</h3>
+<span class="font-bold text-primary">₹50</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">Soft, cloud-like steamed rice cakes served with our signature spice sambar and fresh chutneys.</p>
+<button class="w-full py-2 bg-surface-container-high rounded-full font-bold text-secondary hover:bg-secondary hover:text-white transition-colors">Add to Cart</button>
+</div>
+<!-- Dosa -->
+<div class="group bg-surface rounded-lg p-4 shadow-none hover:shadow-xl transition-all duration-300">
+<div class="overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="large golden crispy paper dosa served with spicy potato masala and variety of vibrant south indian chutneys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVdfdwDMYl1EW7Mg45kFhxLrYptdWnTdI3MSCXQkxZOetehOcpIn7__glq4xnEelVSGU6hjwLdlAq6KRBB0juGBu1JXcTbvSOCLdM4dU0h7xe09YGdQGNzuxGgymp1b8l-Jx8ZdmMDohHpoA2SXn_rm-gAM1xs9HbNhPQ8QgsJsnI9jWBstuEeu3k83uY2aijQv99qDZZB6CTeGTrGHJxXLkwTMN8y5D2ki-rEJI9mx6Jdt53V9lC8PYNYtxqcWUXH3coKrDFHsjk"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Dosa</h3>
+<span class="font-bold text-primary">₹80</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">Golden, crispy crepes made from fermented rice and lentil batter. A street-food essential.</p>
+<button class="w-full py-2 bg-surface-container-high rounded-full font-bold text-secondary hover:bg-secondary hover:text-white transition-colors">Add to Cart</button>
+</div>
+<!-- Pongal -->
+<div class="group bg-surface rounded-lg p-4 shadow-none hover:shadow-xl transition-all duration-300">
+<div class="overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="creamy ghee pongal garnished with roasted cashews and black pepper served in a traditional metal dish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4pCXr89NM7443g_snS4uilzjnhP-cnEZakz-ab3wsAkT6y4g4la-6pIZeHHZe1svN-T9pYT5UsUKaghnFtE5tODBWOqGEHqdwfiJCAKavdqOGmtj2qGTtC7y1nr1CybOMF8mWVB_4GL58N1m97odVJ3LbRuYUxFGsStYQa2SRnUvEdaXqdALb8gl5NLgW6-n7kZi99fMKVTw1Q6F1KyJ4iLwCcHW4mV_RTIVcnzqcOOTCnJqq12-Q_8F9fSMbEQMGqjv4TxD-xJk"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Pongal</h3>
+<span class="font-bold text-primary">₹70</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">Peppery, creamy comfort rice and lentils cooked with ghee, ginger, and roasted cashews.</p>
+<button class="w-full py-2 bg-surface-container-high rounded-full font-bold text-secondary hover:bg-secondary hover:text-white transition-colors">Add to Cart</button>
+</div>
+<!-- Vadai -->
+<div class="group bg-surface rounded-lg p-4 shadow-none hover:shadow-xl transition-all duration-300">
+<div class="overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="crispy golden brown medhu vadai with a hole in the center served with fresh coriander chutney" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAERMvkFPH8G7Nq9rmkYhPkFkOLtCgrP2KPaII8k1C-lCGbPDfVRBS0YlCtP2KMzlaRkMDQdMbCaUq5xLKd35o9LqK25R5my3Cp0sEnrGTJWq59C7otEJjCxRQQFGH4BbR6mmE3KvDvUrJOpmbtejgopgkJkwNuqjA8JTSsya_eXm3tPSr5c8_ZkhObbltsj1G0FX9CKVqxh2zDpjCCQbEAvUnw63EVAonpzj4bvbgDRUAjdC2ntnSaHDQOzCX2GNrXMCI2gD86cuE"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Vadai</h3>
+<span class="font-bold text-primary">₹40</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">Crispy on the outside, fluffy inside lentil doughnuts seasoned with whole peppercorns.</p>
+<button class="w-full py-2 bg-surface-container-high rounded-full font-bold text-secondary hover:bg-secondary hover:text-white transition-colors">Add to Cart</button>
+</div>
+<!-- Filter Coffee -->
+<div class="group bg-surface rounded-lg p-4 shadow-none hover:shadow-xl transition-all duration-300">
+<div class="overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="traditional south indian filter coffee served in brass tumbler and davara with thick frothy milk and rich aroma" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFn_ttdLIvYKZ49KhXrNJxWPY1mUeAEPJ2sg7PBwlPjqBvDDc9lPDaJZfjVTVVuJvws3WO3_1fpkNsT25JkXXQ_r4OamXPYRxhM43cce2y5l5L-EUiqWJviaHUIpBmFITEOSQCaOUTt3zJ66de0n7jY6qTA-ykYNqgReujne-cszgT2gl_9NxrqS_J_PgxURwghZ_KMD1aTMqXxk2k5n_HzSdAkPdxQk-KXqTRnaQmXxNphqf5PAvGV0UfpUGpCMF6gwTOuynIYs8"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Filter Coffee</h3>
+<span class="font-bold text-primary">₹30</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">The soul of Madras. Strong brew mixed with hot frothy milk, served in a traditional brass cup.</p>
+<button class="w-full py-2 bg-surface-container-high rounded-full font-bold text-secondary hover:bg-secondary hover:text-white transition-colors">Add to Cart</button>
+</div>
+<!-- Biriyani -->
+<div class="group bg-surface rounded-lg p-4 shadow-none hover:shadow-xl transition-all duration-300">
+<div class="overflow-hidden rounded-lg mb-4 aspect-[4/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="aromatic seeraga samba rice biriyani with tender meat and spices served on a banana leaf with boiled egg and raita" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIVZPflofEpI-1DfujvjNw0OZnUC6F7_pAenw7l5b_wif99D3GITpiJuZKKpy4Bw48rRNNpQloI-DF40W-jeD-nxbOylFnKQ_Ip-nBV7KzxKm7Imk9HeC1jJ8UPuPVyoXa1epOOK-LFT4kfI8pz1hcxUsRsFuu0Mrb1Z2GSJbPUzVaxZOFEMBfjuRFaSNBHg0kqGIrF4ocyjLqjQrpWY1Mb8vmbyFojtP9b0lYsfuk7qtEkhsdsMQRzdR4ESS-oCoL8CncH_pr3EU"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Biriyani</h3>
+<span class="font-bold text-primary">₹180</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">Seeraga Samba rice cooked slow-fire with traditional spices and tender meat. Fragrant and rich.</p>
+<button class="w-full py-2 bg-surface-container-high rounded-full font-bold text-secondary hover:bg-secondary hover:text-white transition-colors">Add to Cart</button>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline font-black text-4xl mb-4 text-on-surface">From Kadai to Doorstep</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">We follow age-old traditions to ensure every bite feels like home.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Connectors -->
+<div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-0.5 bg-dashed bg-primary-container/30"></div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-24 h-24 bg-primary-fixed rounded-full flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-on-primary-fixed" data-icon="restaurant_menu">restaurant_menu</span>
+</div>
+<h3 class="font-headline font-bold text-xl mb-3">Order</h3>
+<p class="text-on-surface-variant">Place your favorite street food order through our easy-to-use menu.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-24 h-24 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-on-secondary-fixed" data-icon="skillet">skillet</span>
+</div>
+<h3 class="font-headline font-bold text-xl mb-3">Prepare</h3>
+<p class="text-on-surface-variant">Our expert chefs cook it with love using fresh ingredients and secret spices.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-24 h-24 bg-tertiary-fixed rounded-full flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-fixed" data-icon="moped">moped</span>
+</div>
+<h3 class="font-headline font-bold text-xl mb-3">Deliver</h3>
+<p class="text-on-surface-variant">Get it hot and fresh at your doorstep in record time by our delivery heroes.</p>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-surface-container py-24 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto relative">
+<div class="absolute -top-12 -left-12 opacity-5 text-[12rem] font-black pointer-events-none">"</div>
+<div class="text-center mb-16 relative">
+<h2 class="font-headline font-black text-4xl text-on-surface">The Talk of the Town</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 rounded-lg shadow-sm border border-outline-variant/10">
+<div class="flex gap-1 text-primary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-6">"Finally! A place that gets the Filter Coffee right. It reminded me of the small stall near my college in Chennai. Truly authentic."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed"></div>
+<div>
+<span class="font-bold block text-sm">Arun Kumar</span>
+<span class="text-xs text-on-surface-variant">Chennai Regular</span>
+</div>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-lg shadow-sm border border-outline-variant/10 md:-translate-y-4">
+<div class="flex gap-1 text-primary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-6">"The Biriyani is legendary. The aroma hits you before the box is even opened. Definitely ordering for every Sunday family lunch."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed"></div>
+<div>
+<span class="font-bold block text-sm">Deepika S.</span>
+<span class="text-xs text-on-surface-variant">Food Critic</span>
+</div>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-lg shadow-sm border border-outline-variant/10">
+<div class="flex gap-1 text-primary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-6">"Fast delivery and the Vadai was still crispy! ChaiKadai has become my go-to for breakfast. Clean and authentic."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed"></div>
+<div>
+<span class="font-bold block text-sm">Vignesh R.</span>
+<span class="text-xs text-on-surface-variant">Loyal Customer</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#fff8ef] w-full rounded-t-[4rem] py-12 px-8 flex flex-col items-center text-center gap-6 border-t border-[#7e5700]/5">
+<div class="text-xl font-bold text-[#7e5700] mb-4 font-headline">ChaiKadai</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="text-[#7e5700]/70 hover:text-[#b51a1b] transition-all font-body text-sm" href="#">Privacy Policy</a>
+<a class="text-[#7e5700]/70 hover:text-[#b51a1b] transition-all font-body text-sm" href="#">Terms of Service</a>
+<a class="text-[#7e5700]/70 hover:text-[#b51a1b] transition-all font-body text-sm" href="#">Partner with Us</a>
+<a class="text-[#7e5700]/70 hover:text-[#b51a1b] transition-all font-body text-sm" href="#">Contact Support</a>
+</div>
+<div class="flex gap-4 mb-8">
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">public</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">call</span>
+</button>
+</div>
+<p class="text-[#7e5700]/70 font-body text-sm leading-relaxed max-w-md">
+            © 2024 ChaiKadai - The Modern Madrasa Kitchen. All rights reserved. Bringing the streets of Tamil Nadu to your home.
+        </p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-4 pt-2 bg-[#fff8ef]/90 backdrop-blur-xl z-50 rounded-t-[3rem] shadow-[0_-12px_32px_rgba(30,27,19,0.15)] border-t border-[#7e5700]/10">
+<a class="flex flex-col items-center justify-center bg-gradient-to-b from-[#7e5700] to-[#ffb300] text-white rounded-full p-3 mb-2 transform -translate-y-2 shadow-lg" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7e5700]/60 p-2 hover:bg-[#7e5700]/10 rounded-full transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7e5700]/60 p-2 hover:bg-[#7e5700]/10 rounded-full transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7e5700]/60 p-2 hover:bg-[#7e5700]/10 rounded-full transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Profile</span>
+</a>
+</nav>
+</body></html>
